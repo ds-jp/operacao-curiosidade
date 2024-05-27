@@ -1,0 +1,23 @@
+@charset "UTF-8";
+
+main > div#titulo > div.botao {
+  display: flex;
+  width: 234px;
+  height: 39px;
+}
+
+main > div#titulo > div.botao > button {
+  border-style: none;
+  width: 100%;
+  background-color: #5763A0;
+  color: var(--color-02);
+  border-radius: 5px;
+  cursor: pointer;
+
+  font-weight: 700;
+  font-size: 14px;
+}
+
+main > div#titulo > div.botao > button:hover {
+  background-color: #6c7bc4;
+}

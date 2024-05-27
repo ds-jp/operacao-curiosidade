@@ -1,0 +1,97 @@
+<main>
+	<div>
+		<h2>{{ editData ? 'Editar Cadastro' : 'Novo Cadastro' }}</h2>
+	</div>
+	<form id="form-cadastro" [formGroup]="registerForm" (ngSubmit)="onSubmit()" autocomplete="on">
+		<div>
+			<input type="radio" formControlName="status" id="iativo" title="Marque para cadastro ativo" [value] = "1" (click)="toggleStatus()">
+			<label class="user-select" id="label-ativo" for="iativo">Ativo</label>
+		</div>
+
+		<p [ngClass]="{'form-error-hidden': !formError, 'form-error': formError}" class="transition" id="">{{ errorMessage }}</p>
+
+		<fieldset>
+			<legend>1º Fatos e Dados</legend>
+
+			<label for="inome">
+				Nome
+				<span *ngIf="isInvalid('name')">
+						<span *ngIf="isInvalid('name')" [ngClass]="{'error': isInvalid('name')}">{{ getErrorMessage('name') }}</span>
+				</span>
+			</label>
+			<input [ngClass]="getInputClasses('name')" id="inome" class="transition" type="text" formControlName="name"  autocomplete="name" title="Digite aqui o nome completo" placeholder="Armando da Silva Magalhães">
+
+			<div>
+				<div id="dividade">
+					<label for="iidade">
+						Idade
+						<span *ngIf="isInvalid('age')">
+							<span *ngIf="isInvalid('age')" [ngClass]="{'error': isInvalid('age')}">{{ getErrorMessage('age') }}</span>
+						</span>
+					</label>
+					<input [ngClass]="getInputClasses('age')" class="transition" type="number" formControlName="age" id="iidade" title="Digite aqui a idade" placeholder="22" oninput="this.value = this.value.slice(0, 3)">
+				</div>
+
+				<div id="divemail">
+					<label for="iemail">
+						E-mail
+						<span *ngIf="isInvalid('email')">
+							<span *ngIf="isInvalid('email')" [ngClass]="{'error': isInvalid('email')}">{{ getErrorMessage('email') }}</span>
+						</span>
+					</label>
+					<input [ngClass]="getInputClasses('email')"  class="transition" type="email" formControlName="email" id="iemail" autocomplete="email" title="Digite aqui o e-mail" placeholder="email@email.com">
+				</div>
+			</div>
+
+			<label for="iend">
+				Endereço
+				<span *ngIf="isInvalid('address')">
+					<span *ngIf="isInvalid('address')" [ngClass]="{'error': isInvalid('address')}">{{ getErrorMessage('address') }}</span>
+				</span>
+			</label>
+			<input [ngClass]="getInputClasses('address')" class="transition" type="text" formControlName="address" id="iend" autocomplete="street-address" title="Digite aqui o endereço completo" placeholder="Rua das Laranjeiras, 285 - Cornélio Procópio - 86300-000 - PR">
+
+			<label for="iinfo">
+				Outras Informações
+				<span *ngIf="isInvalid('otherInformation')">
+					<span *ngIf="isInvalid('otherInformation')" [ngClass]="{'error': isInvalid('otherInformation')}">{{ getErrorMessage('otherInformation') }}</span>
+				</span>
+			</label>
+			<textarea [ngClass]="getInputClasses('otherInformation')" class="transition" type="text" formControlName="otherInformation" id="iinfo" title="Digite aqui outras informações" placeholder="Outras informações"></textarea>
+		</fieldset>
+
+		<fieldset>
+			<legend>
+				2º Interesses
+				<span *ngIf="isInvalid('interests')">
+					<span *ngIf="isInvalid('interests')" [ngClass]="{'error': isInvalid('interests')}">{{ getErrorMessage('interests') }}</span>
+				</span>
+			</legend>
+			<textarea [ngClass]="getInputClasses('interests')" class="transition" type="text" formControlName="interests" id="iint" title="Digite aqui os interesses" placeholder="Interesses"></textarea>
+		</fieldset>
+
+		<fieldset>
+			<legend>
+				3º Sentimentos
+				<span *ngIf="isInvalid('feelings')">
+					<span *ngIf="isInvalid('feelings')" [ngClass]="{'error': isInvalid('feelings')}">{{ getErrorMessage('feelings') }}</span>
+				</span>
+			</legend>
+			<textarea [ngClass]="getInputClasses('feelings')" class="transition" type="text" formControlName="feelings" id="isent" title="Digite aqui os sentimentos" placeholder="Sentimentos"></textarea>
+		</fieldset>
+
+		<fieldset>
+			<legend>
+				4º Valores
+				<span *ngIf="isInvalid('values')">
+					<span *ngIf="isInvalid('values')" [ngClass]="{'error': isInvalid('values')}">{{ getErrorMessage('values') }}</span>
+				</span>
+			</legend>
+			<textarea [ngClass]="getInputClasses('values')" class="transition" type="text" formControlName="values" id="ival" title="Digite aqui os valores" placeholder="Valores"></textarea>
+		</fieldset>
+
+		<button>
+			<input type="submit" id="btn-cadastro" value="{{ editData ? 'ATUALIZAR' : 'GRAVAR' }}">
+		</button>
+	</form>
+</main>

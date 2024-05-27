@@ -1,0 +1,27 @@
+<main>
+	<div id="cartoes">
+		<div class="cartao">
+			<div>
+				<p id="total-cad" class="azul">{{ getDataCount() }}</p>
+			</div>
+			<span>Total de cadastros</span>
+		</div>
+		<div class=" cartao">
+			<div>
+				<p id="monthly-total-cad" class="verde">{{ monthlyCount }}</p>
+			</div>
+			<span>Cadastros nos últimos 30 dias</span>
+		</div>
+		<div class="cartao">
+			<div>
+				<p id="inactive-total-cad" class="vermelho">{{ inactiveCount }}</p>
+			</div>
+			<span>Cadastros com pendência de revisão</span>
+		</div>
+	</div>
+	<div id="tabela-home">
+		<app-table [pageData]="pageData"
+		(nextPage)="loadNextPage()" (previousPage)="loadPreviousPage()" (pageSizeChange)="changePageSize($event)">
+		</app-table>
+	</div>
+</main>

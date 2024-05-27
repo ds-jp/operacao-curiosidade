@@ -1,0 +1,220 @@
+@charset "UTF-8";
+
+body {
+  background-color: var(--color-03);
+  height: 100vh;
+}
+
+main {
+  overflow-y: auto;
+  background-color: var(--color-02);
+  margin: auto;
+  margin-top: 5px;
+  padding: 15px 15px 15px 15px;
+}
+
+main > div {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 12px 0px;
+}
+
+main > div > h2 {
+  color: var(--color-04);
+  font-size: 18px;
+  font-weight: 700;
+}
+
+main > div > div > span {
+  color: var(--color-01);
+  font-size: 14px;
+  font-weight: 400;
+}
+
+main > form {
+  margin: 5px;
+}
+
+main > form > fieldset {
+  border-style: none;
+  display: flex;
+  flex-direction: column;
+}
+
+main > form > fieldset > legend {
+  font-weight: 700;
+  font-size: 16px;
+  width: 100%;
+  border-bottom: 2px solid var(--color-08);
+  margin-bottom: 6px;
+}
+
+main > form > fieldset label {
+  color: var(--color-13);
+  font-size: 14px;
+  font-weight: 400;
+}
+
+main > form > fieldset input,
+main > form > fieldset textarea {
+  background-color: var(--color-03);
+  width: 100%;
+  font-size: 13px;
+  padding: 5px;
+  margin-bottom: 5px;
+  height: 29px;
+}
+
+main > form > fieldset input:focus {
+  height: 35px;
+}
+
+
+main > form > fieldset textarea {
+  resize: vertical;
+  max-height: 98px;
+}
+
+main > form > fieldset textarea#iinfo {
+  height: 32px;
+}
+
+main > form > fieldset textarea#iint {
+  height: 43px;
+}
+
+main > form > fieldset textarea#isent {
+  height: 38px;
+}
+
+main > form > fieldset textarea#ival {
+  height: 36px;
+}
+
+main > form > fieldset textarea#iinfo:focus,
+main > form > fieldset textarea#iint:focus,
+main > form > fieldset textarea#ival:focus,
+main > form > fieldset textarea#isent:focus {
+  height: 45px;
+}
+
+main > form > fieldset > div {
+  display: flex;
+}
+
+main > form > fieldset > div > div {
+  display: flex;
+  flex-direction: column;
+}
+
+main > form > fieldset > div > div#dividade {
+  width: 30%;
+}
+
+main > form > fieldset > div > div#divemail {
+  width: 70%;
+}
+
+main > form > fieldset > div > div > input#iidade {
+  width: 90%;
+}
+
+main > form > fieldset > div > div > input#iemail {
+  width: 100%;
+}
+
+.preencher {
+  border: 1px solid var(--color-05);
+}
+
+.preenchido {
+  border: 1px solid var(--color-03);
+}
+
+main > form > button {
+  width: 100%;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  margin-top: 5px;
+  width: 234px;
+  height: 39px;
+  border-radius: 5px;
+  border-style: none;
+}
+
+main > form > button > input[type=submit] {
+  color: var(--color-02);
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  width: 100%;
+  height: 100%;
+  background: #61A057;
+  border-radius: 5px;
+  border-style: none;
+  cursor: pointer;
+}
+
+main > form > button > input[type=submit]:hover {
+  background: #6dc460;
+}
+
+main > form > button > input[type=submit]:disabled {
+  background-color: gray;
+  border-color: gray;
+  cursor: not-allowed;
+}
+
+#search {
+  display: none;
+}
+
+#ipesq-desktop {
+  display: none;
+}
+
+@media screen and (max-width: 1322px) {
+  main {
+    height: calc(100% - 68px);
+    width: 98%;
+  }
+
+  p#form-error {
+    left: 50%;
+    width: 90%;
+    background-color: rgba(0, 0, 0, 0.85);
+    border-radius: 5px;
+    padding: 15px;
+    transform: translate(-50%, 0%);
+  }
+}
+
+@media screen and (min-width: 1322px) {
+  main {
+    margin-left: 355px;
+    width: auto;
+    margin-right: 16px;
+  }
+
+  p#form-error {
+    left: 50%;
+    width: 60%;
+    background-color: rgba(0, 0, 0, 0.85);
+    border-radius: 5px;
+    padding: 15px;
+    transform: translate(-30%, 0%);
+  }
+}
+
+@media screen and (min-width: 2000px) {
+  p#form-error {
+    left: 50%;
+    width: 60%;
+    background-color: rgba(0, 0, 0, 0.85);
+    border-radius: 5px;
+    padding: 15px;
+    transform: translate(-40%, 0%);
+  }
+}

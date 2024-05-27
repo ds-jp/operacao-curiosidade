@@ -1,0 +1,107 @@
+.popup {
+	position: fixed;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+}
+
+.background {
+	background-color: rgba(0, 0, 0, 0.5);
+}
+
+.popup-content {
+	background-color: var(--color-02);
+	padding: 20px;
+	width: 80%;
+	max-width: 552px;
+	border-radius: 10px;
+	border: 1px solid gray;
+}
+
+.popup-title {
+	display: flex;
+	align-items: center;
+}
+
+.icon-warning {
+	color: var(--color-05);
+	margin-right: 2px;
+}
+
+.popup-content > h2 {
+	border-bottom: 1px solid var(--color-01);
+	margin-bottom: 15px;
+}
+
+.popup-content > h2,
+.popup-content > p {
+	color: var(--color-01)
+}
+
+pre {
+	white-space: pre-wrap;
+	word-break: break-word;
+}
+
+.popup-message {
+	max-height: 350px;
+	overflow: auto;
+}
+
+.buttons,
+.buttons2 {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.buttons {
+	width: 55%;
+}
+
+.buttons2 {
+	width: 35%;
+}
+
+.popup-button {
+	margin-top: 20px;
+	color: var(--color-02);
+	font-weight: bold;
+	border-radius: 5px;
+	width: 80px;
+	border: none;
+	padding: 5px;
+	cursor: pointer;
+}
+
+.popup-close,
+.popup-alterar {
+	background-color: var(--color-07);
+}
+
+.popup-close:hover,
+.popup-alterar:hover {
+	color: var(--color-08);
+	background-color: var(--color-13);
+}
+
+.popup-excluir {
+	background-color: var(--color-05);
+}
+
+.popup-excluir:hover {
+	background-color: #ff4444;
+}
+
+.popup-sim {
+	background-color: green;
+}
+
+.popup-sim:hover {
+	background-color: rgb(6, 180, 6);
+}

@@ -1,0 +1,33 @@
+@charset "UTF-8";
+
+main {
+  position: relative;
+  overflow-y: auto;
+  background-color: var(--color-02);
+  margin: auto;
+  margin-top: 5px;
+  padding: 15px 15px 15px 15px;
+}
+
+main > div#titulo {
+  height: 39px;
+}
+
+main > div#tabela {
+  height: 91%;
+}
+
+@media screen and (max-width: 1322px) {
+  main {
+    height: calc(100% - 68px);
+    width: 98%;
+  }
+}
+
+@media screen and (min-width: 1322px) {
+  main {
+    margin-left: 355px;
+    width: auto;
+    margin-right: 16px;
+  }
+}

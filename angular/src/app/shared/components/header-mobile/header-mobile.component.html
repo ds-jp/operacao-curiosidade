@@ -1,0 +1,29 @@
+<header id="mobile">
+  <div id="pesquisa">
+    <span
+      (click)="showNav()"
+      class="material-symbols-outlined"
+      id="toggle-menu"
+      >{{ logoText }}</span
+    >
+    <form class="pesquisa" autocomplete="off" id="search-bar">
+      <input
+        class="transition"
+        type="search"
+        name="pesq"
+        id="ipesq-mobile"
+        title="Digite aqui sua pesquisa pelo nome do usuário"
+        placeholder="{{ searchBarPlaceholder }}"
+        [(ngModel)]="searchQuery"
+        (input)="onSearch($event)"
+        (keydown.enter)="$event.preventDefault()"
+      />
+    </form>
+  </div>
+  <div id="usuario">
+    <img src="../../../assets/images/foto-usuario.jpeg" alt="Foto do usuário" />
+    <span>João Pedro</span>
+    <span id="divisor"></span>
+    <span (click)="logout()" id="logout" class="logout">SAIR</span>
+  </div>
+</header>

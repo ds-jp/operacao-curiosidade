@@ -1,0 +1,32 @@
+<main>
+	<section id="login">
+		<div id="div-btn-mudar-tema">
+			<div id="btn-mudar-tema">
+				<label class="switch">
+					<input type="checkbox" id='mudar-tema-desktop' (change)="onThemeChange($event)" #themeToggle>
+					<span class="slider round"></span>
+				</label>
+			</div>
+		</div>
+		<div class="user-select" id="logo">
+			<p>OC</p>
+			<h1>Operação Curiosidade</h1>
+		</div>
+		<p [ngClass]="{'form-error-hidden': !formError, 'form-error': formError}" class="transition" id="">{{ errorMessage }}</p>
+		<form [formGroup]="loginForm" (ngSubmit)="onSubmit()" id="form-login" autocomplete="on">
+			<div id="campos">
+				<input [ngClass]="getInputClasses('email')" class="transition" type="email" formControlName="email" id="iemail" title="Digite aqui seu e-mail" placeholder="E-mail" autocomplete="email">
+				<span *ngIf="isInvalid('email')">
+					<span *ngIf="isInvalid('email')" [ngClass]="{'error': isInvalid('email')}">{{ getErrorMessage('email') }}</span>
+				</span>
+
+				<input [ngClass]="getInputClasses('password')" class="transition" type="password" formControlName="password" title="Digite aqui sua senha" placeholder="Senha" autocomplete="current-password">
+				<span *ngIf="isInvalid('password')">
+					<span *ngIf="isInvalid('password')" [ngClass]="{'error': isInvalid('password')}">{{ getErrorMessage('password') }}</span>
+				</span>
+
+				<input id="btn-login" type="submit" value="ENTRAR">
+			</div>
+		</form>
+	</section>
+</main>

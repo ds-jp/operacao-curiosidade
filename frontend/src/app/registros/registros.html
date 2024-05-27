@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="../../assets/images/favicon.ico" type="image/x-icon">
+  <title>Operação Curiosidade - Registros</title>
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+  <link rel="stylesheet" href="../../styles/style.css">
+  <link rel="stylesheet" href="../../styles/media-query.css">
+  <link rel="stylesheet" href="registros.css">
+  <link rel="stylesheet" href="../../styles/tabela.css">
+
+  <script src="../../scripts/apiFunctions.js" type="text/javascript" defer></script>
+  <script src="../../scripts/popup.js" type="text/javascript" defer></script>
+  <script src="../../scripts/themeControl.js" type="text/javascript" defer></script>
+  <script src="../../scripts/domEvents.js" type="text/javascript" defer></script>
+  <script src="../../scripts/sessionManagement.js" type="text/javascript" defer></script>
+  <script src="../../scripts/config.js" type="text/javascript" defer></script>
+  <script src="../../scripts/tabela.js" type="text/javascript" defer></script>
+  <script src="../header-mobile/header-mobile.js" type="text/javascript" defer></script>
+  <script src="../header-component/header-component.js" type="text/javascript" defer></script>
+  <script src="../nav-mobile/nav-mobile.js" type="text/javascript" defer></script>
+  <script src="../nav-component/nav-component.js" type="text/javascript" defer></script>
+  <script src="../popup-component/popup-component.js" type="text/javascript" defer></script>
+</head>
+
+<body>
+  <nav-component></nav-component>
+  <header-component></header-component>
+  <header-mobile-component></header-mobile-component>
+  <nav-mobile-component></nav-mobile-component>
+  <main>
+    <div id="titulo">
+      <h2>Registros</h2>
+    </div>
+    <div id="tabela">
+      <span>Quantidade de linhas: </span>
+      <select class="user-select" name="linha" id="ilinha">
+        <option value="5">5</option>
+        <option value="10">10</option>
+        <option value="20" selected>20</option>
+        <option value="50">50</option>
+        <option value="100">100</option>
+      </select>
+      <table id="tabela-registro"></table>
+      <span>Página: </span><span id="pagina"> </span>
+      <button id="anterior">Página anterior</button>
+      <button id="proxima">Próxima página</button>
+    </div>
+  </main>
+</body>
+
+</html>

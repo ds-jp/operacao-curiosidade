@@ -1,0 +1,158 @@
+main {
+	position: relative;
+	background-color: var(--color-03);
+	width: 100vw;
+	height: 100vh;
+}
+
+section#login {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	overflow: hidden;
+
+	width: 450px;
+	height: 429px;
+	border: 1px solid var(--color-01);
+	border-radius: 5px;
+	background-color: var(--color-02);
+
+	transform: translate(-50%, -50%);
+}
+
+section#login > div#div-btn-mudar-tema {
+	position: relative;
+}
+
+section#login > div > div#btn-mudar-tema {
+	position: absolute;
+	left: 383px;
+	top: 15px;
+
+	display: inline-flex;
+	align-items: center;
+	justify-content: right;
+	flex-direction: column;
+	row-gap: 5px;
+}
+
+div#logo {
+	width: 134px;
+	height: 134px;
+	border-radius: 50%;
+	text-align: center;
+	margin: auto;
+	margin-top: 20px;
+	background-color: var(--color-03);
+
+	font-family: 'Inter', sans-serif;
+	font-style: normal;
+}
+
+div#logo > p {
+	padding-top: 20%;
+	font-size: 36px;
+	font-weight: 900;
+	letter-spacing: -2px;
+}
+
+div#logo > h1 {
+	font-size: 12px;
+	font-weight: 400;
+}
+
+form > div#campos {
+	align-self: center;
+	margin: auto;
+	width: 323px;
+}
+
+form > div#campos > input {
+	margin-top: 27px;
+	width: 323px;
+	height: 43px;
+	padding: 5px;
+	font-size: 13px;
+}
+
+form > div#campos > input[type=email],
+form > div#campos > input[type=password] {
+	background-color: var(--color-02);
+}
+
+form > div#campos > input[type=email]:focus,
+form > div#campos > input[type=password]:focus {
+	height: 48px;
+}
+
+.error {
+	margin-left: 3px;
+	font-size: 13px;
+	color: var(--color-05);
+}
+
+.preencher {
+	border: 2px solid var(--color-05);
+}
+
+.preenchido {
+	border: 2px solid var(--color-01);
+}
+
+form > div#campos > input#btn-login {
+	color: var(--color-02);
+	background-color: var(--color-01);
+	border: 2px solid var(--color-01);
+	border-radius: 6px;
+	font-size: 12px;
+	font-weight: 700;
+	letter-spacing: 0.52px;
+	cursor: pointer;
+}
+
+form > div#campos > input#btn-login:hover {
+	background-color: var(--color-13);
+	border: 2px solid var(--color-13);
+}
+
+form > div#campos > input#btn-login:disabled {
+	background-color: gray;
+	border-color: gray;
+	cursor: not-allowed;
+}
+
+p.form-error {
+	left: 50%;
+	width: 85%;
+	background-color: rgba(0, 0, 0, 0.32);
+	border-radius: 5px;
+	padding: 15px;
+	transform: translate(-50%, 0%);
+	margin-top: -32px;
+}
+
+@media screen and (max-width: 1322px) {
+	section#login {
+		width: 358px;
+	}
+
+	section#login > div#div-btn-mudar-tema {
+		position: relative;
+	}
+
+	section#login > div > div#btn-mudar-tema {
+		position: absolute;
+		left: 291px;
+		top: 15px;
+
+		display: inline-flex;
+		align-items: center;
+		justify-content: right;
+		flex-direction: column;
+		row-gap: 5px;
+	}
+
+	p.form-error {
+		width: 100%;
+	}
+}

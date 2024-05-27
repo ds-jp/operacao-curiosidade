@@ -1,0 +1,26 @@
+<div class="popup background" (click)="closeModal()">
+	<div class="popup-content" (click)="stopPropagation($event)">
+		<h2 class="popup-title">
+			@if (deleteClient) {
+				<span class="material-symbols-outlined icon-warning">warning</span>
+			}
+			{{ title }}
+		</h2>
+		<pre class="popup-message">{{ content }}</pre>
+		<div [ngClass]="{buttons: !deleteClient, buttons2: deleteClient}">
+			@if (onlyClose || !deleteClient) {
+				<button class="popup-button popup-close" (click)="closeModal()">FECHAR</button>
+				@if (!deleteClient && !onlyClose) {
+						<button class="popup-button popup-alterar" (click)="onEdit()">ALTERAR</button>
+						<button class="popup-button popup-excluir"(click)="openNewModal()">EXCLUIR</button>
+				}
+			}
+			@if (deleteClient) {
+				<button class="popup-button popup-sim" (click)="onConfirm()">SIM</button>
+				<button class="popup-button popup-excluir" (click)="closeModal()">NÃO</button>
+			}
+		</div>
+
+	</div>
+</div>
+

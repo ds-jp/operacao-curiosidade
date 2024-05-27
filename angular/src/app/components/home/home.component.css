@@ -1,0 +1,70 @@
+main > div#cartoes {
+	display: flex;
+	width: 100%;
+	height: auto;
+}
+
+main > div > div.cartao {
+	background-color: var(--color-02);
+	margin-top: 8px;
+	display: flex;
+	align-items: end;
+	justify-content: right;
+	position: relative;
+	padding: 5px 8px;
+}
+
+main > div > div.cartao > div {
+	height: 100%;
+	width: 100%;
+	position: absolute;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding-right: 20px;
+}
+
+main > div > div.cartao > div > p {
+	font-size: 58px;
+	font-weight: 400;
+}
+
+main > div > div.cartao > div > p.azul {
+	color: #415996;
+}
+
+main > div > div.cartao > div > p.verde {
+	color: #3F9D2F;
+}
+
+main > div > div.cartao > div > p.vermelho {
+	color: #C15959;
+}
+
+main > div > div.cartao > span {
+	font-size: 12px;
+	font-weight: 400;
+	color: var(--color-04);
+}
+
+main > div#tabela-home {
+	overflow-y: auto;
+	background-color: var(--color-02);
+	margin: auto;
+	width: 97%;
+	margin-top: 5px;
+	padding: 15px;
+}
+
+@media screen and (min-width: 768px) {}
+
+@media screen and (min-width: 1322px) {
+	main {
+		padding-left: 339px;
+		width: 100%;
+	}
+
+	main > div#tabela-home {
+		height: calc(100% - 223px);
+	}
+}

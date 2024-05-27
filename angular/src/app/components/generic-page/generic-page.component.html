@@ -1,0 +1,7 @@
+@if (pageData.showContent) {
+	<main>
+		<app-table [pageData]="pageData" [dataCount]="dataCount"
+		(nextPage)="loadNextPage()" (previousPage)="loadPreviousPage()" (pageSizeChange)="changePageSize($event)">
+		</app-table>
+	</main>
+}

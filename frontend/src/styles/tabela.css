@@ -1,0 +1,85 @@
+@charset "UTF-8";
+
+main > div#titulo {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+main > div#titulo > h2 {
+  color: var(--color-04);
+  font-size: 18px;
+  font-weight: 700;
+}
+
+main > div#tabela {
+  background-color: var(--color-02);
+  margin: auto;
+  width: 97%;
+  overflow-y: auto;
+}
+
+main > div#tabela > span {
+  color: var(--color-07);
+}
+
+main > div#tabela > button {
+  color: var(--color-07);
+  background-color: var(--color-03);
+  padding: 3px;
+  border: 1px solid var(--color-13);
+  cursor: pointer;
+  border-radius: 10px;
+}
+
+main > div#tabela > button:hover {
+  background-color: var(--color-08);
+}
+
+main > div#tabela > button:disabled {
+  visibility: hidden;
+}
+
+main > div#tabela > select {
+  color: var(--color-07);
+  background-color: var(--color-03);
+  cursor: pointer;
+}
+
+main > div#tabela > select:hover {
+  color: var(--color-13);
+}
+
+main > div#tabela > table {
+  width: 100%;
+}
+
+main > div#tabela th {
+  color: var(--color-04);
+  font-size: 13px;
+  padding: 0 6px;
+  font-weight: 400;
+  text-align: left;
+  border-bottom: solid 1px var(--color-03);
+}
+
+main > div#tabela td {
+  color: var(--color-07);
+  padding: 0 6px;
+  font-size: 16px;
+  text-align: left;
+  font-weight: 400;
+  border-bottom: solid 1px var(--color-03);
+  cursor: pointer;
+}
+
+main > div#tabela td:hover {
+  text-decoration: underline;
+}
+
+
+main > div#tabela tr:hover {
+  background-color: var(--color-06);
+}

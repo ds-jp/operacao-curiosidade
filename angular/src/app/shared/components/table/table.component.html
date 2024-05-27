@@ -1,0 +1,54 @@
+<main>
+	<div id="titulo">
+		<h2>{{ pageData.title }}</h2>
+		@if (pageData.isRegister) {
+			<div class="botao">
+				<div routerLink="/new-register"><button class="register" type="button">NOVO CADASTRO</button></div>
+			</div>
+		}
+		@if (pageData.isReport) {
+			<div class="botao">
+				<div><button class="print" type="button" (click)="print()">IMPRIMIR</button></div>
+			</div>
+		}
+	</div>
+	<div id="tabela">
+		@if (pageData.data && pageData.data.length > 0) {
+			<span>Quantidade de linhas: </span>
+			<select class="user-select" name="linha" id="ilinha" (change)="onPageSizeChange($event)" [value]="pageSize">
+				<option value="5">5</option>
+				<option value="10">10</option>
+				<option value="20" selected>20</option>
+				<option value="50">50</option>
+				<option value="100">100</option>
+			</select>
+			<table id="imprimir">
+				<thead>
+					<tr>
+						<th *ngFor="let label of labels">{{ label }}</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr *ngFor="let log of pageData.data" [id]="'row-id-' + log.id" (click)="openModal(log)">
+							<td *ngFor="let key of keys">
+								@if (key !== 'client' || log.client !== null) {
+									{{ key === 'timestamp' ? formatDateTime(log[key]) : log[key] }}
+								} @else {
+									Não aplicável
+								}
+							</td>
+					</tr>
+				</tbody>
+
+			</table>
+
+			<div class="paginacao">
+				<span>Página: {{ currentPage }} de {{ totalPages }}</span>
+				<button title="Página anterior" id="anterior" (click)="previousPage.emit()" [disabled]="isFirstPage"><</button>
+				<button title="Próxima página" id="proxima" (click)="nextPage.emit()" [disabled]="isLastPage">></button>
+			</div>
+		} @else {
+			<span>Não há dados disponíveis</span>
+		}
+	</div>
+</main>

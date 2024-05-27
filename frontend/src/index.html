@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="assets/images/favicon.ico" type="image/x-icon">
+  <title>Operação Curiosidade - Login</title>
+  <link rel="stylesheet" href="styles/style.css">
+  <link rel="stylesheet" href="index.css">
+
+  <script src="scripts/apiFunctions.js" type="text/javascript" defer></script>
+  <script src="scripts/popup.js" type="text/javascript" defer></script>
+  <script src="scripts/themeControl.js" type="text/javascript" defer></script>
+  <script src="scripts/domEvents.js" type="text/javascript" defer></script>
+  <script src="scripts/sessionManagement.js" type="text/javascript" defer></script>
+  <script src="scripts/config.js" type="text/javascript" defer></script>
+  <script src="scripts/form.js" type="text/javascript" defer></script>
+  <script src="app/popup-component/popup-component.js" type="text/javascript" defer></script>
+</head>
+
+<body>
+  <main>
+    <section id="login">
+      <div id="div-btn-mudar-tema">
+        <div id="btn-mudar-tema">
+          <label class="switch">
+            <input type="checkbox" id='mudar-tema-login'>
+            <span class="slider round"></span>
+          </label>
+        </div>
+      </div>
+      <div class="user-select" id="logo">
+        <p>OC</p>
+        <h1>Operação Curiosidade</h1>
+      </div>
+      <form action="app/home/home.html" id="form-login" autocomplete="on">
+        <div id="campos">
+          <input class="transition preenchido" type="email" name="email" id="iemail" title="Digite aqui seu e-mail" placeholder="E-mail" maxlength="345" autocomplete="email" required>
+          <input class="transition preenchido" type="password" name="senha" id="isenha" minlength="8" maxlength="23" title="Digite aqui sua senha" placeholder="Senha" autocomplete="current-password" required>
+          <input id="btn-login" type="submit" value="ENTRAR">
+        </div>
+      </form>
+      <p class="transition" id="form-error"></p>
+    </section>
+  </main>
+</body>
+
+</html>

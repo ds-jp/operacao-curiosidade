@@ -1,0 +1,66 @@
+@media screen and (max-width: 1322px) {
+
+  header-component,
+  nav-component {
+    display: none;
+  }
+
+  header-mobile-component,
+  nav-mobile-component {
+    display: flex;
+  }
+
+  main {
+    height: calc(100% - 50px);
+  }
+
+  main > div#tabela {
+    height: calc(100% - 365px);
+  }
+
+  main > div#cartoes {
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-bottom: 8px;
+  }
+
+  main > div > div.cartao {
+    width: 45%;
+    height: 138px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  main > div > div.cartao {
+    width: 220px;
+    height: 173px;
+    flex-grow: 1;
+    margin: 8px;
+  }
+}
+
+@media screen and (min-width: 1322px) {
+
+  header-component,
+  nav-component {
+    display: flex;
+  }
+
+  header-mobile-component,
+  nav-mobile-component {
+    display: none;
+  }
+
+  main {
+    height: calc(100% - 94px);
+  }
+
+  main > div > div.cartao {
+    width: 322px;
+    height: 200px;
+    flex-grow: 1;
+    margin: 16px;
+  }
+}

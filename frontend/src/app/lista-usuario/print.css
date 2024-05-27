@@ -1,0 +1,20 @@
+@charset "UTF-8";
+
+@media print {
+
+  nav-component,
+  header-component,
+  header-mobile-component,
+  nav-mobile-component {
+    display: none;
+  }
+
+  .nao-imprimir {
+    display: none;
+  }
+
+
+  * {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+  }
+}
